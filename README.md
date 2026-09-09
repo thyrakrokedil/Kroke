@@ -13,7 +13,7 @@ Pluginet registrerar post-typen **Supportärende** där alla supportärenden fin
 
 ## Taxonomi
 
-Taxonomiet som registreras heter "Supportkategorier" och är en hierarkisk taxonomi med supportkategorier som t.ex Klarna, Walley, Nexi, här kan man lägga till, redigera eller söka efter supportkategori.
+Taxonomiet som registreras heter **Supportkategorier** och är en hierarkisk taxonomi med supportkategorier som t.ex Klarna, Walley, Nexi, här kan man lägga till, redigera eller söka efter supportkategori.
 
 ## Installation
 Det installeras genom:

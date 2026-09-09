@@ -5,7 +5,7 @@ Ett WordPress-plugin som hanterar och visar vanliga supportärenden och deras l�
 
 ## Vad pluginet gör
 
-Skapar en post-typ **Supportärende** där man kan dokumentera vanliga kundproblem och hur de löses. Varje ärende kan kategoriseras med taxonomin **Supportkategori**. Det har även funktion för att automatiskt skriva om permalänkar vid aktivering av pluginet.
+Skapar en post-typ **Supportärende** där man kan dokumentera vanliga kundproblem och hur de löses. Varje ärende kan kategoriseras med taxonomin **Supportkategori** för varje plugin. Det har även funktion för att automatiskt skriva om permalänkar vid aktivering av pluginet.
 
 ## Post-typ
 

@@ -1,14 +1,14 @@
 <?php
 
-
-//Abspath 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+//Abspath
+if (! defined('ABSPATH')) {
+    exit;
 }
 
 //Registrerar taxonomin
-add_action( 'init', 'thyra_reg_taxonomy' );
-function thyra_reg_taxonomy() {
+add_action('init', 'thyra_reg_taxonomy');
+function thyra_reg_taxonomy()
+{
     $args = array(
         'labels' => array(
             'name'                  => 'Plugin',
@@ -32,15 +32,14 @@ function thyra_reg_taxonomy() {
         'show_admin_column' => true,
         'rewrite'           => array( 'slug' => 'supportkategori' ),
     );
-   register_taxonomy( 'thyra_supportkategori', 'thyra_supportarende', $args );
-
-
+    register_taxonomy('thyra_supportkategori', 'thyra_supportarende', $args);
 }
 
 
 
-add_action( 'init', 'test_reg_taxonomy' );
-function test_reg_taxonomy() {
+add_action('init', 'test_reg_taxonomy');
+function test_reg_taxonomy()
+{
     $args = array(
         'labels' => array(
             'name'                  => 'Svårighetsgrad',
@@ -65,10 +64,5 @@ function test_reg_taxonomy() {
         'show_admin_column' => true,
         'rewrite'           => array( 'slug' => 'test' ),
     );
-   register_taxonomy( 'thyra_test', 'thyra_supportarende', $args );
-
-
+    register_taxonomy('thyra_test', 'thyra_supportarende', $args);
 }
-
-
-?>

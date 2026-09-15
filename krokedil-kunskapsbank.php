@@ -11,17 +11,18 @@
 
 
 
-//Abspath 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+//Abspath
+if (! defined('ABSPATH')) {
+    exit;
 }
 
 require __DIR__ . '/taxonomi.php';
 
 //Prefix THYRA_
 
-add_action( 'init', 'thyra_reg_post_type' );
-function thyra_reg_post_type() {
+add_action('init', 'thyra_reg_post_type');
+function thyra_reg_post_type()
+{
     $args = array(
         'labels' => array(
             'name'                  => 'Supportärenden',
@@ -40,23 +41,17 @@ function thyra_reg_post_type() {
         'public'       => true,
         'has_archive'  => true,
         'menu_icon'    => 'dashicons-coffee',
-		'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
-		'rewrite' 	   => array( 'slug' => 'supportarenden' ), //Läsbara delen av url
-		'show_in_rest' => true,
+        'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+        'rewrite'      => array( 'slug' => 'supportarenden' ), //Läsbara delen av url
+        'show_in_rest' => true,
     );
-    register_post_type( 'thyra_supportarende', $args );
-
-
+    register_post_type('thyra_supportarende', $args);
 }
 
 //Activation hook som körs vid aktivering för att slippa att reglerna skrivs om efter varje sidladdning, då de skrivs om när pluginet aktiveras
-register_activation_hook( __FILE__, function() {
+register_activation_hook(__FILE__, function () {
     thyra_reg_post_type();
     thyra_reg_taxonomy();
     test_reg_taxonomy();
     flush_rewrite_rules(); //Rewrite reglerna i post type/taxonomi
 });
-
-
-
-?>
